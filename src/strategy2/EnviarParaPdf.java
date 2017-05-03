@@ -17,6 +17,7 @@ public class ImprimaPdf implements IImprimir {
 	      {
 	         PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream("Pedido.pdf"));
 	         document.open();
+	         document.add(new Paragraph("Detalhes do pedido"));
 	         document.add(new Paragraph(toPrint));
 	         document.close();
 	         writer.close();
