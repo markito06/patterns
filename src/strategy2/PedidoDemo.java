@@ -7,9 +7,9 @@ public class PedidoDemo {
 		Pedido pedidoPadrao = new Pedido(new CalculadorDeFretePadrao());
 		Pedido pedidoExpresso = new Pedido(new CalculadorDeFreteExpresso());
 		
-		ReportPedido console = new ReportPedido(new ImprimaNoConsole());
-		ReportPedido tela = new ReportPedido(new imprimaNaTela());
-		ReportPedido pdf = new ReportPedido(new ImprimaPdf());
+		ReportPedido console = new ReportPedido(new EnviarParaTerminal());
+		ReportPedido tela = new ReportPedido(new EnviarParaTela());
+		ReportPedido pdf = new ReportPedido(new EnviarParaPdf());
 		
 		console.imprimir(pedidoPadrao.calcularFrete());
 		tela.imprimir(pedidoExpresso.calcularFrete());

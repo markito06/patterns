@@ -1,7 +1,7 @@
 package strategy2;
 
-public interface IImprimir {
+public interface IEnviar {
 
-	void show(String toPrint);
+	void envie(String conteudo);
 
 }

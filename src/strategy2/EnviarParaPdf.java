@@ -8,17 +8,17 @@ import com.itextpdf.text.DocumentException;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfWriter;
 
-public class ImprimaPdf implements IImprimir {
+public class EnviarParaPdf implements IEnviar {
 
 	@Override
-	public void show(String toPrint) {
+	public void envie(String conteudo) {
 		 Document document = new Document();
 	      try
 	      {
 	         PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream("Pedido.pdf"));
 	         document.open();
 	         document.add(new Paragraph("Detalhes do pedido"));
-	         document.add(new Paragraph(toPrint));
+	         document.add(new Paragraph(conteudo));
 	         document.close();
 	         writer.close();
 	      } catch (DocumentException e)

@@ -1,10 +1,10 @@
 package strategy2;
 
-public class ImprimaNoConsole implements IImprimir {
+public class EnviarParaTerminal implements IEnviar {
 
 	@Override
-	public void show(String toPrint) {
-		System.out.println(toPrint);
+	public void envie(String conteudo) {
+		System.out.println(conteudo);
 
 	}
 
